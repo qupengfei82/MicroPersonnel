@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MicroPersonnelApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MicroPersonnelApplication.class, args);
+		  SpringApplication.run(MicroPersonnelApplication.class, args);
+		  System.out.println("666");
 	}
 
 }
+   
