@@ -8,7 +8,7 @@ public class MicroPersonnelApplication {
 
 	public static void main(String[] args) {
 		  SpringApplication.run(MicroPersonnelApplication.class, args);
-		  System.out.println("6666666");
+		  System.out.println("6666666666");
 	}
 
 }
