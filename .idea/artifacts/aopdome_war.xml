@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="aopdome:war">
+    <output-path>$PROJECT_DIR$/aopdome/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>aopdome</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="aopdome-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="aopdome:war exploded" />
+    </root>
+  </artifact>
+</component>
