@@ -7,6 +7,8 @@ import java.util.Date;
 public class Salary {
     private Integer id;
 
+    private Integer eid;
+
     private Integer basicSalary;
 
     private Integer bonus;
@@ -21,9 +23,6 @@ public class Salary {
 
     private Float pensionPer;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    private Date createDate;
-
     private Integer medicalBase;
 
     private Float medicalPer;
@@ -32,7 +31,51 @@ public class Salary {
 
     private Float accumulationFundPer;
 
-    private String name;
+    private Integer unemploymentBase;
+
+    private Float unemploymentPer;
+
+    private Integer takeHome;
+
+    public Salary(Integer id, Integer eid, Integer basicSalary, Integer bonus, Integer lunchSalary, Integer trafficSalary, Integer allSalary, Integer pensionBase, Float pensionPer, Integer medicalBase, Float medicalPer, Integer accumulationFundBase, Float accumulationFundPer, Integer unemploymentBase, Float unemploymentPer, Integer takeHome) {
+        this.id = id;
+        this.eid = eid;
+        this.basicSalary = basicSalary;
+        this.bonus = bonus;
+        this.lunchSalary = lunchSalary;
+        this.trafficSalary = trafficSalary;
+        this.allSalary = allSalary;
+        this.pensionBase = pensionBase;
+        this.pensionPer = pensionPer;
+        this.medicalBase = medicalBase;
+        this.medicalPer = medicalPer;
+        this.accumulationFundBase = accumulationFundBase;
+        this.accumulationFundPer = accumulationFundPer;
+        this.unemploymentBase = unemploymentBase;
+        this.unemploymentPer = unemploymentPer;
+        this.takeHome = takeHome;
+    }
+
+    public Salary() {
+    }
+
+    public Salary(Integer eid, Integer basicSalary, Integer bonus, Integer lunchSalary, Integer trafficSalary, Integer allSalary, Integer pensionBase, Float pensionPer, Integer medicalBase, Float medicalPer, Integer accumulationFundBase, Float accumulationFundPer, Integer unemploymentBase, Float unemploymentPer, Integer takeHome) {
+        this.eid = eid;
+        this.basicSalary = basicSalary;
+        this.bonus = bonus;
+        this.lunchSalary = lunchSalary;
+        this.trafficSalary = trafficSalary;
+        this.allSalary = allSalary;
+        this.pensionBase = pensionBase;
+        this.pensionPer = pensionPer;
+        this.medicalBase = medicalBase;
+        this.medicalPer = medicalPer;
+        this.accumulationFundBase = accumulationFundBase;
+        this.accumulationFundPer = accumulationFundPer;
+        this.unemploymentBase = unemploymentBase;
+        this.unemploymentPer = unemploymentPer;
+        this.takeHome = takeHome;
+    }
 
     public Integer getId() {
         return id;
@@ -40,6 +83,14 @@ public class Salary {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getEid() {
+        return eid;
+    }
+
+    public void setEid(Integer eid) {
+        this.eid = eid;
     }
 
     public Integer getBasicSalary() {
@@ -98,14 +149,6 @@ public class Salary {
         this.pensionPer = pensionPer;
     }
 
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
-
     public Integer getMedicalBase() {
         return medicalBase;
     }
@@ -138,11 +181,49 @@ public class Salary {
         this.accumulationFundPer = accumulationFundPer;
     }
 
-    public String getName() {
-        return name;
+    public Integer getUnemploymentBase() {
+        return unemploymentBase;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUnemploymentBase(Integer unemploymentBase) {
+        this.unemploymentBase = unemploymentBase;
+    }
+
+    public Float getUnemploymentPer() {
+        return unemploymentPer;
+    }
+
+    public void setUnemploymentPer(Float unemploymentPer) {
+        this.unemploymentPer = unemploymentPer;
+    }
+
+    public Integer getTakeHome() {
+        return takeHome;
+    }
+
+    public void setTakeHome(Integer takeHome) {
+        this.takeHome = takeHome;
+    }
+
+    @Override
+    public String toString() {
+        return "Salary{" +
+                "id=" + id +
+                ", eid=" + eid +
+                ", basicSalary=" + basicSalary +
+                ", bonus=" + bonus +
+                ", lunchSalary=" + lunchSalary +
+                ", trafficSalary=" + trafficSalary +
+                ", allSalary=" + allSalary +
+                ", pensionBase=" + pensionBase +
+                ", pensionPer=" + pensionPer +
+                ", medicalBase=" + medicalBase +
+                ", medicalPer=" + medicalPer +
+                ", accumulationFundBase=" + accumulationFundBase +
+                ", accumulationFundPer=" + accumulationFundPer +
+                ", unemploymentBase=" + unemploymentBase +
+                ", unemploymentPer=" + unemploymentPer +
+                ", takeHome=" + takeHome +
+                '}';
     }
 }

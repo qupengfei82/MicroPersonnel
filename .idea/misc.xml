@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/dome" />
     <file type="web" url="file://$PROJECT_DIR$/email" />
     <file type="web" url="file://$PROJECT_DIR$/emaildemo" />
+    <file type="web" url="file://$PROJECT_DIR$/mybatis" />
     <file type="web" url="file://$PROJECT_DIR$/springaop" />
   </component>
   <component name="JavaScriptSettings">
@@ -18,6 +19,7 @@
         <option value="$PROJECT_DIR$/demo/pom.xml" />
         <option value="$PROJECT_DIR$/email/pom.xml" />
         <option value="$PROJECT_DIR$/emaildemo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis/pom.xml" />
       </list>
     </option>
   </component>

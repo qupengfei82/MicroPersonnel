@@ -9,26 +9,69 @@
     <result column="ecPoint" property="ecpoint" jdbcType="INTEGER" />
     <result column="ecType" property="ectype" jdbcType="INTEGER" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
+
+    <!-- association ：配置一对一属性 -->
+    <!-- property:实体类中里面的  属性名 -->
+    <!-- javaType:属性类型 -->
+
+    <!--员工表-->
+    <association property="employee" javaType="org.javaboy.vhr.model.Employee" >
+      <!-- id:声明主键，表示 college_id 是关联查询对象的唯一标识-->
+      <id property="id" column="id" />
+      <result property="name" column="name"/>
+      <result property="gender" column="gender"/>
+      <result property="departmentId" column="departmentId" />
+    </association>
+
+
   </resultMap>
   <sql id="Base_Column_List" >
     id, eid, ecDate, ecReason, ecPoint, ecType, remark
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from employeeec
     where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getEmployeec" resultMap="BaseResultMap">
+select c.*,e.name,gender,departmentId
+from employeeec c,employee e
+where e.id=c.eid  and
+e.workState='在职'
+    <if test="name !=null and name!=''">
+      and e.name like concat('%',#{name},'%')
+    </if>
+    <if test="page !=null and size !=null">
+      limit #{page},#{size}
+    </if>
+  </select>
+  <select id="getTotal" resultType="java.lang.Long">
+    select count(*) from employeeec c
+    <where>
+      <if test="empc!=null">
+        <if test="empc.name !=null and empc.name!=''">
+          name like concat('%',#{empc.name},'%')
+        </if>
+      </if>
+    </where>
+  </select>
+  <select id="getEmployeec$emp$dept" resultType="java.util.List">
+    select c.*,e.name,gender,departmentId, d.name AS dname
+from employeeec c,employee e,department d
+where e.id=c.eid and e.departmentId=d.id and
+e.workState='在职'
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from employeeec
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="org.javaboy.vhr.model.Employeeec" >
-    insert into employeeec (id, eid, ecDate, 
-      ecReason, ecPoint, ecType, 
+    insert into employeeec (id, eid, ecDate,
+      ecReason, ecPoint, ecType,
       remark)
-    values (#{id,jdbcType=INTEGER}, #{eid,jdbcType=INTEGER}, #{ecdate,jdbcType=DATE}, 
-      #{ecreason,jdbcType=VARCHAR}, #{ecpoint,jdbcType=INTEGER}, #{ectype,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{eid,jdbcType=INTEGER}, #{ecdate,jdbcType=DATE},
+      #{ecreason,jdbcType=VARCHAR}, #{ecpoint,jdbcType=INTEGER}, #{ectype,jdbcType=INTEGER},
       #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Employeeec" >

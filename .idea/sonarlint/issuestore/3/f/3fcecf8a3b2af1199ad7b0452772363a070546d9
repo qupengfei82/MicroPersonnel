@@ -1,13 +1,13 @@
 
-\
-java:S3457""AFormat specifiers should be used instead of string concatenation.(Úå½°ÿÿÿÿÿ
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¿Ö
 j
 java:S3305"UInject this field value directly into "rabbitTemplate", the only method that uses it.(·×¶%
+\
+java:S3457""AFormat specifiers should be used instead of string concatenation.(Úå½°ÿÿÿÿÿ
+W
+java:S3457"AFormat specifiers should be used instead of string concatenation.(¾©–‚
 k
 java:S3305"UInject this field value directly into "rabbitTemplate", the only method that uses it.(ìÑØÅ
 A
 java:S1602%",Remove useless curly braces around statement(ò°àe
-[
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¿Ö
-W
-java:S3457"AFormat specifiers should be used instead of string concatenation.(¾©–‚

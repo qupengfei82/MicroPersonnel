@@ -1,0 +1,6 @@
+
+c
+java:S1128"ARemove this unused import 'org.apache.ibatis.annotations.Result'.(¹ª¯¡úÿÿÿÿ8½¦Êœ .
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á”»ñ8ÉÚù› .
+d
+java:S1128"BRemove this unused import 'org.apache.ibatis.annotations.Results'.(…¬ÃÞùÿÿÿÿ8½¦Êœ .

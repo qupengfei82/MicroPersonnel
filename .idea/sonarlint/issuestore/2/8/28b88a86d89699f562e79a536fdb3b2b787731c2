@@ -1,0 +1,7 @@
+
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÍáá8äÀõ´ .
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ééå¥ıÿÿÿÿ8ûÈè² .
+’
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ééå¥ıÿÿÿÿ8ûÈè² .
+]
+java:S1128";Remove this unused import 'org.javaboy.vhr.model.Employee'.(ş¯€Õşÿÿÿÿ8äÀõ´ .

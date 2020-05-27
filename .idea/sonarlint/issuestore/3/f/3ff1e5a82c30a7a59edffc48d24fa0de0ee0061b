@@ -1,0 +1,15 @@
+
+Z
+java:S1128"=Remove this unused import 'org.javaboy.vhr.model.dto.Salary'.(©ŠÔÏ8¸Ì„‰¡.
+Q
+java:S1656"/Remove or correct this useless self-assignment.(óÇ–Ğÿÿÿÿÿ8«˜Õ®¡.
+q
+java:S3252"OUse static access with "com.github.pagehelper.page.PageMethod" for "startPage".(¶—ìÖıÿÿÿÿ8˜Åë®¡.
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ŒÆË®¡.
+„
+java:S4165"bRemove this useless assignment; "page" already holds the assigned value along all execution paths.(óÇ–Ğÿÿÿÿÿ8«˜Õ®¡.
+}
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "pageinfo".(÷¬ªß8§µÜˆ¡.
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷¬ªß8áĞ®¡.

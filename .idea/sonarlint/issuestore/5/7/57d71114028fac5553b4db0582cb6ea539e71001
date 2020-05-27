@@ -1,28 +1,28 @@
 
 ?
-java:S1148ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-n
-java:S3776å"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(’Ù¾‹ıÿÿÿÿ
+java:S1148Õ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
 ^
 java:S1128"CRemove this unused import 'org.springframework.util.MultiValueMap'.(·ÚÀŞùÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(€ü¤õ
 o
 java:S1128	"TRemove this unused import 'org.springframework.context.support.BeanDefinitionDslKt'.(€”±Çüÿÿÿÿ
+U
+java:S4719Ñ"9Replace charset name argument with StandardCharsets.UTF_8(·†®Áúÿÿÿÿ
 Z
 java:S4719Ñ">Replace charset name argument with StandardCharsets.ISO_8859_1(·†®Áúÿÿÿÿ
 ?
-java:S1148Õ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+java:S1148ã"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
 u
 java:S2293×"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ü¹‚Æüÿÿÿÿ
-P
-java:S1118":Add a private constructor to hide the implicit public one.(€ü¤õ
-U
-java:S4719Ñ"9Replace charset name argument with StandardCharsets.UTF_8(·†®Áúÿÿÿÿ
-=	java:S131„""Add a default case to this switch.(›‡ã¿øÿÿÿÿ
 =	java:S131Æ""Add a default case to this switch.(›‡ã¿øÿÿÿÿ
-I
-java:S1199Å"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ
+=	java:S131„""Add a default case to this switch.(›‡ã¿øÿÿÿÿ
 g
 java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(óëÕŠùÿÿÿÿ
+n	java:S135ò"YReduce the total number of break and continue statements in this loop to use at most one.(ÆÏÇg
+n
+java:S3776å"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(’Ù¾‹ıÿÿÿÿ
 e
 java:S2095#"JUse try-with-resources or close this "HSSFWorkbook" in a "finally" clause.(ĞÅ±Ìøÿÿÿÿ
-n	java:S135ò"YReduce the total number of break and continue statements in this loop to use at most one.(ÆÏÇg
+I
+java:S1199Å"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ

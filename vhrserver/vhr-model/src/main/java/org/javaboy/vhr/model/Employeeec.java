@@ -17,6 +17,29 @@ public class Employeeec {
 
     private String remark;
 
+
+    public Employeeec() {
+    }
+
+    public Employeeec(Integer id, Integer eid, Date ecdate, String ecreason, Integer ecpoint, Integer ectype, String remark) {
+        this.id = id;
+        this.eid = eid;
+        this.ecdate = ecdate;
+        this.ecreason = ecreason;
+        this.ecpoint = ecpoint;
+        this.ectype = ectype;
+        this.remark = remark;
+    }
+
+    public Employeeec(Integer eid, Date ecdate, String ecreason, Integer ecpoint, Integer ectype, String remark) {
+        this.eid = eid;
+        this.ecdate = ecdate;
+        this.ecreason = ecreason;
+        this.ecpoint = ecpoint;
+        this.ectype = ectype;
+        this.remark = remark;
+    }
+
     public Integer getId() {
         return id;
     }
@@ -46,7 +69,7 @@ public class Employeeec {
     }
 
     public void setEcreason(String ecreason) {
-        this.ecreason = ecreason == null ? null : ecreason.trim();
+        this.ecreason = ecreason;
     }
 
     public Integer getEcpoint() {
@@ -70,6 +93,19 @@ public class Employeeec {
     }
 
     public void setRemark(String remark) {
-        this.remark = remark == null ? null : remark.trim();
+        this.remark = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "Employeeec{" +
+                "id=" + id +
+                ", eid=" + eid +
+                ", ecdate=" + ecdate +
+                ", ecreason='" + ecreason + '\'' +
+                ", ecpoint=" + ecpoint +
+                ", ectype=" + ectype +
+                ", remark='" + remark + '\'' +
+                '}';
     }
 }

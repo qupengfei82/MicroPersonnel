@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/email/email.iml" filepath="$PROJECT_DIR$/email/email.iml" />
       <module fileurl="file://$PROJECT_DIR$/emaildemo/emaildemo.iml" filepath="$PROJECT_DIR$/emaildemo/emaildemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mailserver/mailserver.iml" filepath="$PROJECT_DIR$/mailserver/mailserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/mybatis/mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/vhr.iml" filepath="$PROJECT_DIR$/.idea/vhr.iml" />
       <module fileurl="file://$PROJECT_DIR$/vhrserver/vhr-mapper/vhr-mapper.iml" filepath="$PROJECT_DIR$/vhrserver/vhr-mapper/vhr-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/vhrserver/vhr-model/vhr-model.iml" filepath="$PROJECT_DIR$/vhrserver/vhr-model/vhr-model.iml" />

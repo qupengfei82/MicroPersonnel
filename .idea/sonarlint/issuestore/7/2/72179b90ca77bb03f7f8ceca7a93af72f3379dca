@@ -1,0 +1,7 @@
+
+H
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8ÍŒãà .
+c	java:S107>"BConstructor has 15 parameters, which is greater than 7 authorized.(¾´Åüÿÿÿÿ8ùƒÆæ .
+j
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.annotation.JsonFormat'.(ıÙè‹øÿÿÿÿ8ÍŒãà .
+^	java:S107("BConstructor has 16 parameters, which is greater than 7 authorized.( ¼µ–8’©Åæ .

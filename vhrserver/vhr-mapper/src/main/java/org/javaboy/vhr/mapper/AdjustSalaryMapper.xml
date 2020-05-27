@@ -14,7 +14,7 @@
     id, eid, asDate, beforeSalary, afterSalary, reason, remark
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from adjustsalary
     where id = #{id,jdbcType=INTEGER}
@@ -23,12 +23,13 @@
     delete from adjustsalary
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" parameterType="org.javaboy.vhr.model.AdjustSalary" >
-    insert into adjustsalary (id, eid, asDate, 
-      beforeSalary, afterSalary, reason, 
+    insert into adjustsalary (id, eid, asDate,
+      beforeSalary, afterSalary, reason,
       remark)
-    values (#{id,jdbcType=INTEGER}, #{eid,jdbcType=INTEGER}, #{asdate,jdbcType=DATE}, 
-      #{beforesalary,jdbcType=INTEGER}, #{aftersalary,jdbcType=INTEGER}, #{reason,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{eid,jdbcType=INTEGER}, #{asdate,jdbcType=DATE},
+      #{beforesalary,jdbcType=INTEGER}, #{aftersalary,jdbcType=INTEGER}, #{reason,jdbcType=VARCHAR},
       #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="org.javaboy.vhr.model.AdjustSalary" >

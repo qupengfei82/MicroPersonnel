@@ -36,6 +36,8 @@ public class EmpBasicController {
     PositionService positionService;
     @Autowired
     DepartmentService departmentService;
+    @Autowired
+    EmployeeecService employeeecService;
 
     @GetMapping("/")
     public RespPageBean getEmployeeByPage(@RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "10") Integer size, Employee employee, Date[] beginDateScope) {
@@ -111,5 +113,23 @@ public class EmpBasicController {
             return RespBean.ok("上传成功");
         }
         return RespBean.error("上传失败");
+    }
+
+    @PostMapping("/addEmpc")
+    public RespBean addEmpc(@RequestBody Employeeec employeeec){
+        if (employeeecService.addEmpeeec(employeeec) == 1) {
+            return RespBean.ok("添加成功!");
+        }
+        return RespBean.error("添加失败!");
+    }
+
+    @GetMapping("/selectEmpcById")
+    public Employeeec selectEmpcById(Integer id){
+        return employeeecService.selectById(id);
+    }
+
+    @GetMapping("/getEmployeec")
+    public RespPageBean getEmployeec(String name,@RequestParam(defaultValue = "1")Integer page,@RequestParam(defaultValue = "10 ")Integer size){
+        return this.employeeecService.getEmployeec(name,page,size);
     }
 }

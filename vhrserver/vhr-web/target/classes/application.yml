@@ -3,7 +3,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
     password: 123456
-    url: jdbc:mysql://39.105.29.102:3306/vhr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://39.105.29.102:3306/vhr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
   rabbitmq:
     username: guest
     password: guest
@@ -14,6 +14,7 @@ spring:
     host: 192.168.99.100
     database: 0
     port: 6379
+    password: 123456
   cache:
     cache-names: menus_cache
 server:
@@ -23,3 +24,5 @@ server:
 fastdfs:
   nginx:
     host: http://192.168.99.100/
+mybatis:
+  config-location: classpath:mybatis/mybatis.xml

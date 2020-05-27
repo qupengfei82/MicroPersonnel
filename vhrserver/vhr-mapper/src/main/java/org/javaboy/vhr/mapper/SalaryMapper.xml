@@ -18,7 +18,7 @@
         <result column="name" property="name" jdbcType="VARCHAR"/>
     </resultMap>
     <sql id="Base_Column_List">
-    id, basicSalary, bonus, lunchSalary, trafficSalary, allSalary, pensionBase, pensionPer, 
+    id, basicSalary, bonus, lunchSalary, trafficSalary, allSalary, pensionBase, pensionPer,
     createDate, medicalBase, medicalPer, accumulationFundBase, accumulationFundPer, name
   </sql>
     <select id="getAllSalaries" resultMap="BaseResultMap">
@@ -37,15 +37,15 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
     <insert id="insert" parameterType="org.javaboy.vhr.model.Salary">
-    insert into salary (id, basicSalary, bonus, 
-      lunchSalary, trafficSalary, allSalary, 
-      pensionBase, pensionPer, createDate, 
-      medicalBase, medicalPer, accumulationFundBase, 
+    insert into salary (id, basicSalary, bonus,
+      lunchSalary, trafficSalary, allSalary,
+      pensionBase, pensionPer, createDate,
+      medicalBase, medicalPer, accumulationFundBase,
       accumulationFundPer, name)
-    values (#{id,jdbcType=INTEGER}, #{basicSalary,jdbcType=INTEGER}, #{bonus,jdbcType=INTEGER}, 
-      #{lunchSalary,jdbcType=INTEGER}, #{trafficSalary,jdbcType=INTEGER}, #{allSalary,jdbcType=INTEGER}, 
-      #{pensionBase,jdbcType=INTEGER}, #{pensionPer,jdbcType=REAL}, #{createDate,jdbcType=TIMESTAMP}, 
-      #{medicalBase,jdbcType=INTEGER}, #{medicalPer,jdbcType=REAL}, #{accumulationFundBase,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{basicSalary,jdbcType=INTEGER}, #{bonus,jdbcType=INTEGER},
+      #{lunchSalary,jdbcType=INTEGER}, #{trafficSalary,jdbcType=INTEGER}, #{allSalary,jdbcType=INTEGER},
+      #{pensionBase,jdbcType=INTEGER}, #{pensionPer,jdbcType=REAL}, #{createDate,jdbcType=TIMESTAMP},
+      #{medicalBase,jdbcType=INTEGER}, #{medicalPer,jdbcType=REAL}, #{accumulationFundBase,jdbcType=INTEGER},
       #{accumulationFundPer,jdbcType=REAL}, #{name,jdbcType=VARCHAR})
   </insert>
     <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Salary">
@@ -53,6 +53,9 @@
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
                 id,
+            </if>
+            <if test="eid != null">
+                eid,
             </if>
             <if test="basicSalary != null">
                 basicSalary,
@@ -75,9 +78,6 @@
             <if test="pensionPer != null">
                 pensionPer,
             </if>
-            <if test="createDate != null">
-                createDate,
-            </if>
             <if test="medicalBase != null">
                 medicalBase,
             </if>
@@ -90,13 +90,22 @@
             <if test="accumulationFundPer != null">
                 accumulationFundPer,
             </if>
-            <if test="name != null">
-                name,
+            <if test="unemploymentBase != null">
+                unemploymentBase,
+            </if>
+            <if test="unemploymentPer != null">
+                unemploymentPer,
+            </if>
+            <if test="takeHome != null">
+                takeHome,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="id != null">
                 #{id,jdbcType=INTEGER},
+            </if>
+            <if test="eid != null">
+                #{eid,jdbcType=INTEGER},
             </if>
             <if test="basicSalary != null">
                 #{basicSalary,jdbcType=INTEGER},
@@ -119,9 +128,6 @@
             <if test="pensionPer != null">
                 #{pensionPer,jdbcType=REAL},
             </if>
-            <if test="createDate != null">
-                #{createDate,jdbcType=TIMESTAMP},
-            </if>
             <if test="medicalBase != null">
                 #{medicalBase,jdbcType=INTEGER},
             </if>
@@ -134,8 +140,14 @@
             <if test="accumulationFundPer != null">
                 #{accumulationFundPer,jdbcType=REAL},
             </if>
-            <if test="name != null">
-                #{name,jdbcType=VARCHAR},
+            <if test="unemploymentBase != null">
+                #{unemploymentBase,jdbcType=INTEGER},
+            </if>
+            <if test="unemploymentPer != null">
+                #{unemploymentPer,jdbcType=REAL},
+            </if>
+            <if test="takeHome != null">
+                #{takeHome,jdbcType=INTEGER},
             </if>
         </trim>
     </insert>
@@ -163,9 +175,6 @@
             <if test="pensionPer != null">
                 pensionPer = #{pensionPer,jdbcType=REAL},
             </if>
-            <if test="createDate != null">
-                createDate = #{createDate,jdbcType=TIMESTAMP},
-            </if>
             <if test="medicalBase != null">
                 medicalBase = #{medicalBase,jdbcType=INTEGER},
             </if>
@@ -178,8 +187,14 @@
             <if test="accumulationFundPer != null">
                 accumulationFundPer = #{accumulationFundPer,jdbcType=REAL},
             </if>
-            <if test="name != null">
-                name = #{name,jdbcType=VARCHAR},
+            <if test="unemploymentBase != null">
+                unemploymentBase = #{unemploymentBase,jdbcType=INTEGER},
+            </if>
+            <if test="accumulationFundPer != null">
+                accumulationFundPer = #{accumulationFundPer,jdbcType=REAL},
+            </if>
+            <if test="takeHome != null">
+                takeHome = #{takeHome,jdbcType=INTEGER},
             </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
