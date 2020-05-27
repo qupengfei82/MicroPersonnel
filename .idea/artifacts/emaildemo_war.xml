@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="emaildemo:war">
+    <output-path>$PROJECT_DIR$/emaildemo/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>emaildemo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="emaildemo-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="emaildemo:war exploded" />
+    </root>
+  </artifact>
+</component>
